@@ -11,4 +11,20 @@ const personajesSimpsons = [
     { nombre: "Martin", edad: 10, rol: "Compañero de clase" }
     ];
 
-    
+// PUNTO 1
+
+    const personajesMas18 =  personajesSimpsons.filter(function(mas18){
+        return mas18.edad > 18;
+    })
+
+    console.log(personajesMas18);
+
+// PUNTO 2
+
+    const sumaDeEdades = personajesMas18.map(pj => pj.edad).reduce((suma, edad) => suma + edad, 0);
+    console.log(sumaDeEdades);
+
+// PUNTO 3
+
+    const nombresPersonajes = personajesSimpsons.map(pj => pj.nombre);
+    console.log(nombresPersonajes);
